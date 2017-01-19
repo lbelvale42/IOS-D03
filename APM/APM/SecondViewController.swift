@@ -15,7 +15,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate {
     var imageView: UIImageView?
     var image: UIImage?
     
-    func updateMinZoomScaleForSize(size: CGSize) {
+    func updateMinZoomScaleForSize(_ size: CGSize) {
         let widthScale = size.width / imageView!.bounds.width
         scrollView.minimumZoomScale = widthScale
     }
@@ -31,7 +31,7 @@ class SecondViewController: UIViewController, UIScrollViewDelegate {
         scrollView.contentSize = (imageView?.frame.size)!
     }
     
-    func viewForZoomingInScrollView(scrollView: UIScrollView) -> UIView? {
+    func viewForZooming(in scrollView: UIScrollView) -> UIView? {
         return imageView
     }
 }
